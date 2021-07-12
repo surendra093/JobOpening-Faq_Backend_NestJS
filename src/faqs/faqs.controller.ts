@@ -30,12 +30,6 @@ import { FaqsService } from './faqs.service';
       return faqs;
     }
   
-    /*    
-    @Get(':id')
-    getCatagory(@Param('id') catagoryId: string) {
-      return this.catagoriesService.getSingleCatagory(catagoryId);
-    }*/
-  
     @Patch(':id')
     async updateFaq(@Param('id') faqId: string,@Body() body){
         await this.faqsService.updateFaq(faqId,body);

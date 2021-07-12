@@ -30,12 +30,6 @@ import { CatagoriesService } from './catagories.service';
       return catagories;
     }
   
-    /*    
-    @Get(':id')
-    getCatagory(@Param('id') catagoryId: string) {
-      return this.catagoriesService.getSingleCatagory(catagoryId);
-    }*/
-  
     @Patch(':id')
     async updateCatagory(@Param('id') catagoryId: string,@Body() body){
         await this.catagoriesService.updateCatagory(catagoryId,body);

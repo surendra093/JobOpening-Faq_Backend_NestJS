@@ -36,27 +36,9 @@ export class CatagoriesService {
         
         var mysort = { Date: -1 };
         const catagories = await this.catagoryModel.find().sort(mysort).exec();
-       /* const catagories = await this.catagoryModel.find().exec();*/
         return catagories as Catagory[];
     }
 
-    /*
-    async getSingleOpening(openingId: string) {
-        const opening = await this.findOpening(openingId);
-        return {
-            id: opening.id,
-            jobtitle: opening.jobtitle,
-            location: opening.location,
-            EmployementType: opening.EmployementType,
-            Eligibility: opening.Eligibility,
-            Work: opening.Work,
-            Note: opening.Note,
-            skills: opening.skills,
-            Date  : opening.Date,
-            status  : opening.status
-        };
-    }*/
-    
     async updateCatagory(catagoryId : string,body){
 
         const updateCatagory = await this.findCatagory(catagoryId);

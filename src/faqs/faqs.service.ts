@@ -43,23 +43,6 @@ export class FaqsService {
         const faqs = await this.faqModel.find().sort(mysort).exec();
         return faqs as Faq[];
     }
-
-    /*
-    async getSingleOpening(openingId: string) {
-        const opening = await this.findOpening(openingId);
-        return {
-            id: opening.id,
-            jobtitle: opening.jobtitle,
-            location: opening.location,
-            EmployementType: opening.EmployementType,
-            Eligibility: opening.Eligibility,
-            Work: opening.Work,
-            Note: opening.Note,
-            skills: opening.skills,
-            Date  : opening.Date,
-            status  : opening.status
-        };
-    }*/
     
     async updateFaq(faqId : string,body){
 
