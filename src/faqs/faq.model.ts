@@ -14,7 +14,7 @@ export interface Faq extends mongoose.Document {
         
     id              : string;
     question        : string;
-    description     : string;
+    description     : any;
     catagoryName    : string;
     link            : string;
     Date            : Date;
