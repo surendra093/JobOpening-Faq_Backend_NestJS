@@ -5,5 +5,6 @@ const mongoose = require("mongoose");
 exports.CatagorySchema = new mongoose.Schema({
     catagoryField: { type: String },
     Date: { type: Date },
+    faq_count: { type: Number }
 });
 //# sourceMappingURL=catagory.model.js.map
