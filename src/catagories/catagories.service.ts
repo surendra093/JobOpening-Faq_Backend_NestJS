@@ -16,7 +16,6 @@ export class CatagoriesService {
         try{
             const catagoryField = body.catagoryField;
             const Date          = body.Date;
-            //const faq_count     = body.faq_count;
             const newCatagory   = new this.catagoryModel({catagoryField,Date});
             
             const result = await newCatagory.save();
@@ -49,9 +48,7 @@ export class CatagoriesService {
         if (body.Date) {
             updateCatagory.Date = body.Date;
         }
-        //if (body.faq_count != 0) {
-        //updateCatagory.faq_count = body.faq_count;
-        //}
+        
         updateCatagory.save();
     }
 
